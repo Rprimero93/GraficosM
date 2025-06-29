@@ -9,7 +9,7 @@
             width: 80%;
             max-width: 600px;
             margin: 20px auto;
-            background-color: #0E4D4C;
+            background-color: #373737;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -33,12 +33,15 @@
                 data: {
                     labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
                     datasets: [{
-                        label: 'Valores por Mes',
+                        label: 'Cantidad De Solicitudes',
                         data: [42, 60, 89, 105, 70, 1],
                         backgroundColor: '#C5E99F',
                         borderColor: '#0E4D4C',
                         borderWidth: 1,
                         borderRadius: 10 // Bordes redondeados para las barras
+                        barThickness: 30, // Ancho fijo de las barras (en px)
+                        categoryPercentage: 0.6, // Espacio entre categorías (60%)
+                        barPercentage: 0.9 // Ancho de barra relativo al espacio disponible (90%)
                     }]
                 },
                 options: {
@@ -49,7 +52,7 @@
                         },
                         title: {
                             display: true,
-                            text: 'Valores por Mes',
+                            text: 'Cantidad De Solicitudes',
                             color: '#FFFFFF',
                             font: {
                                 size: 16
