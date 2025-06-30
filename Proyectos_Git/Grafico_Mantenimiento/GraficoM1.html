@@ -3,85 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gráfico de Barras</title>
-    <style>
-        .chart-container {
-            width: 80%;
-            max-width: 600px;
-            margin: 20px auto;
-            background-color: #373737;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-    </style>
+    <title>Contador</title>
+    <link rel="stylesheet" href="Estilos.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <script src="JS_GMant.js" defer></script>
 </head>
 <body>
     <div class="chart-container">
         <canvas id="myChart"></canvas>
     </div>
-
-    <!-- Incluye Chart.js -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctx = document.getElementById('myChart').getContext('2d');
-            
-            const myChart = new Chart(ctx, {
-                type: 'bar',
-                data: {
-                    labels: ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio'],
-                    datasets: [{
-                        label: 'Cantidad De Solicitudes',
-                        data: [42, 60, 89, 105, 70, 1],
-                        backgroundColor: '#C5E99F',
-                        borderColor: '#0E4D4C',
-                        borderWidth: 1,
-                        borderRadius: 10 // Bordes redondeados para las barras
-                        barThickness: 30, // Ancho fijo de las barras (en px)
-                        categoryPercentage: 0.6, // Espacio entre categorías (60%)
-                        barPercentage: 0.9 // Ancho de barra relativo al espacio disponible (90%)
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    plugins: {
-                        legend: {
-                            display: false
-                        },
-                        title: {
-                            display: true,
-                            text: 'Cantidad De Solicitudes',
-                            color: '#FFFFFF',
-                            font: {
-                                size: 16
-                            }
-                        }
-                    },
-                    scales: {
-                        x: {
-                            grid: {
-                                display: false,
-                                color: 'rgba(255, 255, 255, 0.1)'
-                            },
-                            ticks: {
-                                color: '#FFFFFF'
-                            }
-                        },
-                        y: {
-                            grid: {
-                                color: 'rgba(255, 255, 255, 0.1)'
-                            },
-                            ticks: {
-                                color: '#FFFFFF',
-                                beginAtZero: true
-                            }
-                        }
-                    }
-                }
-            });
-        });
-    </script>
 </body>
 </html>
