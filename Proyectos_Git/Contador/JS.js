@@ -1,4 +1,4 @@
-const numeroFinal = 367;
+const numeroFinal = 522;
 const elementoContador = document.getElementById('contador');
 const mensajeFinal = document.getElementById('mensajeFinal');
 
